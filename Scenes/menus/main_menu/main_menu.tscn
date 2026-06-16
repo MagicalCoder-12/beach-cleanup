@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_gtplh"]
+[ext_resource type="Script" path="res://Scenes/menus/main_menu/main_menu.gd" id="2_trbfq"]
+
+[node name="MainMenu" instance=ExtResource("1_gtplh")]
+script = ExtResource("2_trbfq")
+game_scene_path = "res://Scenes/main.tscn"

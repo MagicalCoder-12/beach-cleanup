@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djiv63dnr4l5e"]
 
 [ext_resource type="Texture2D" uid="uid://cawhgu30d34hy" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="1_hghv2"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="2_s2q7g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
 size = Vector2(148, 145)
@@ -9,6 +10,9 @@ size = Vector2(148, 145)
 radius = 170.36212
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1999891324]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("2_s2q7g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852784628]
 position = Vector2(36.499996, 29.499998)

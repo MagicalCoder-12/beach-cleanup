@@ -8,6 +8,7 @@ var target_position: Vector2
 var collected: bool = false
 
 func _ready():
+	add_to_group("crabs")
 	initial_position = global_position
 	target_position = initial_position
 	_pick_new_target()
