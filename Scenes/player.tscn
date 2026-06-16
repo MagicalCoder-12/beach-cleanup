@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dv0jl4de16m6n"]
+
+[ext_resource type="Texture2D" uid="uid://bmq58mskghs86" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0087.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://b7yjusmlkvmaj" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://fo625ysehatb" path="res://Scenes/axe.tscn" id="3_6t5aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(10, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(6, 12)
+
+[node name="Player" type="CharacterBody2D" unique_id=95799535]
+scale = Vector2(3, 3)
+script = ExtResource("1_cvnsp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1006470488]
+position = Vector2(0.19999999, -7.9999995)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1138498871]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=207102381]
+position = Vector2(0.19999999, -5.9999995)
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="knight" type="Sprite2D" parent="." unique_id=11552332]
+position = Vector2(0.19999999, -7.9999995)
+texture = ExtResource("1_4flbx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=950493248]
+zoom = Vector2(3, 3)
+
+[node name="Axe" parent="." unique_id=384326258 instance=ExtResource("3_6t5aa")]
+visible = false
+position = Vector2(9.666667, -7)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://djiv63dnr4l5e"]
+
+[ext_resource type="Texture2D" uid="uid://cawhgu30d34hy" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="1_hghv2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
+size = Vector2(148, 145)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
+radius = 170.36212
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1999891324]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852784628]
+position = Vector2(36.499996, 29.499998)
+scale = Vector2(10, 10)
+texture = ExtResource("1_hghv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1905929181]
+position = Vector2(35, 41.5)
+shape = SubResource("RectangleShape2D_ne65n")
+
+[node name="Search" type="Area2D" parent="." unique_id=1967223604]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Search" unique_id=1920794067]
+position = Vector2(34, 43.5)
+shape = SubResource("CircleShape2D_1f0kj")
+debug_color = Color(0.89631295, 0.31799668, 1.92523e-07, 0.41960785)

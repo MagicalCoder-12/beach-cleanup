@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://fo625ysehatb"]
+
+[ext_resource type="Texture2D" uid="uid://ynu520lqgbj5" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0118.png" id="1_5sm5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aowxy"]
+size = Vector2(10, 10)
+
+[node name="Axe" type="Area2D" unique_id=384326258]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=285253227]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_5sm5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=852393379]
+shape = SubResource("RectangleShape2D_aowxy")
