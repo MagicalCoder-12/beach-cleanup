@@ -19,11 +19,15 @@ Person 2
 [url=]Person w/ Link[/url]  
 
 [font_size=48]Sourced[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
+[font_size=24]Tiny Dungeon[/font_size]
+Author: Kenney  
+Source: [url=https://kenney.nl/assets/tiny-dungeon]kenney.nl[/url]  
+License: [url=http://creativecommons.org/publicdomain/zero/1.0/]CC0 1.0 Universal[/url]
+
+[font_size=24]1-Bit Pack[/font_size]
+Author: Kenney  
+Source: [url=https://kenney.nl/assets/1-bit-pack]kenney.nl[/url]  
+License: [url=http://creativecommons.org/publicdomain/zero/1.0/]CC0 1.0 Universal[/url]
 
 [font_size=24]Godot Engine Logo[/font_size]
 Author: Andrea Calabró  
