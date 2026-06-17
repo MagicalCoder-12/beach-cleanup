@@ -119,39 +119,51 @@ position = Vector2(150, 100)
 
 [node name="Crab1" parent="crabs" unique_id=748665008 instance=ExtResource("4_crab")]
 position = Vector2(-232, 306)
+collision_mask = 6
 
 [node name="Crab2" parent="crabs" unique_id=1946949181 instance=ExtResource("4_crab")]
 position = Vector2(-58, 583)
+collision_mask = 6
 
 [node name="Crab3" parent="crabs" unique_id=767551712 instance=ExtResource("4_crab")]
 position = Vector2(31, 81)
+collision_mask = 6
 
 [node name="Crab4" parent="crabs" unique_id=465313972 instance=ExtResource("4_crab")]
 position = Vector2(692, 132)
+collision_mask = 6
 
 [node name="Crab5" parent="crabs" unique_id=1414952116 instance=ExtResource("4_crab")]
 position = Vector2(-1086, 252)
+collision_mask = 6
 
 [node name="Crab6" parent="crabs" unique_id=1181592689 instance=ExtResource("4_crab")]
 position = Vector2(1196, 277)
+collision_mask = 6
 
 [node name="Crab7" parent="crabs" unique_id=1029959412 instance=ExtResource("4_crab")]
 position = Vector2(1096, -349)
+collision_mask = 6
 
 [node name="Crab8" parent="crabs" unique_id=988651210 instance=ExtResource("4_crab")]
 position = Vector2(1992, 508)
+collision_mask = 6
 
 [node name="Crab9" parent="crabs" unique_id=303926133 instance=ExtResource("4_crab")]
 position = Vector2(598, 809)
+collision_mask = 6
 
 [node name="Crab10" parent="crabs" unique_id=837016474 instance=ExtResource("4_crab")]
 position = Vector2(1482, 842)
+collision_mask = 6
 
 [node name="Crab11" parent="crabs" unique_id=2055567722 instance=ExtResource("4_crab")]
 position = Vector2(-812, -43)
+collision_mask = 6
 
 [node name="Crab12" parent="crabs" unique_id=573338988 instance=ExtResource("4_crab")]
 position = Vector2(-1003, 745)
+collision_mask = 6
 
 [node name="Ghost" type="Node2D" parent="." unique_id=1177503510]
 position = Vector2(186, 100)

@@ -39,7 +39,7 @@ position = Vector2(41.333336, 13.666667)
 limit_left = -1229
 limit_top = -460
 limit_right = 2290
-limit_bottom = 1150
+limit_bottom = 1170
 
 [node name="Axe" parent="." unique_id=384326258 instance=ExtResource("3_6t5aa")]
 visible = false
