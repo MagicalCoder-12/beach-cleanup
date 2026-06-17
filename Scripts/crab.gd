@@ -1,9 +1,8 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var move_speed: float = 50.0
 
 var collected: bool = false
-var _velocity: Vector2 = Vector2.ZERO
 var _desired_velocity: Vector2
 var _wander_timer: float = 0.0
 
@@ -25,8 +24,8 @@ func _physics_process(delta):
 		cos(Time.get_ticks_msec() * 0.004 + global_position.x * 0.015)
 	) * 20
 
-	_velocity = _velocity.move_toward(_desired_velocity + oscillation, move_speed * delta * 3)
-	global_position += _velocity * delta
+	velocity = velocity.move_toward(_desired_velocity + oscillation, move_speed * delta * 3)
+	move_and_slide()
 
 func collect():
 	collected = true

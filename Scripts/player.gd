@@ -56,6 +56,10 @@ func _collect_nearby():
 			GameManager.crabs_collected += 1
 			return
 	for body in collect_area.get_overlapping_bodies():
+		if body.is_in_group("crabs") and body.has_method("collect"):
+			body.collect()
+			GameManager.crabs_collected += 1
+			return
 		if body.is_in_group("ghosts") and body.has_method("collect"):
 			if body.vulnerable:
 				body.collect()
