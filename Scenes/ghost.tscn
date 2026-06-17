@@ -1,31 +1,29 @@
 [gd_scene format=3 uid="uid://djiv63dnr4l5e"]
 
-[ext_resource type="Texture2D" uid="uid://cawhgu30d34hy" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="1_hghv2"]
-[ext_resource type="Script" path="res://Scripts/enemy.gd" id="2_s2q7g"]
+[ext_resource type="Script" uid="uid://chcd76m75guxw" path="res://Scripts/enemy.gd" id="1_e3r4w"]
+[ext_resource type="Texture2D" uid="uid://cawhgu30d34hy" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="2_108wt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne65n"]
-size = Vector2(148, 145)
+size = Vector2(37.5, 44)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
-radius = 170.36212
+radius = 28.284271
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1999891324]
+[node name="ghost" type="CharacterBody2D" unique_id=1999891324]
 collision_layer = 4
-collision_mask = 1
-script = ExtResource("2_s2q7g")
+script = ExtResource("1_e3r4w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852784628]
-position = Vector2(36.499996, 29.499998)
-scale = Vector2(10, 10)
-texture = ExtResource("1_hghv2")
+scale = Vector2(3, 3)
+texture = ExtResource("2_108wt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1905929181]
-position = Vector2(35, 41.5)
+position = Vector2(0.25, 2)
 shape = SubResource("RectangleShape2D_ne65n")
 
 [node name="Search" type="Area2D" parent="." unique_id=1967223604]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Search" unique_id=1920794067]
-position = Vector2(34, 43.5)
+position = Vector2(-1, 3)
 shape = SubResource("CircleShape2D_1f0kj")
 debug_color = Color(0.89631295, 0.31799668, 1.92523e-07, 0.41960785)

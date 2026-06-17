@@ -1,56 +1,42 @@
 extends CharacterBody2D
 
-@export var move_speed: float = 50.0
-@export var eat_range: float = 60.0
+@export var move_speed: float = 100.0
 
-var target_crab: Area2D = null
-var stunned: bool = false
+var hit_count: int = 0
+var vulnerable: bool = false
+var _desired_velocity: Vector2
+var _wander_timer: float = 0.0
 
 func _ready():
-	$Search.collision_mask = 1
-	$Search.collision_layer = 4
+	add_to_group("ghosts")
 
 func _physics_process(delta):
-	if stunned:
+	if vulnerable:
+		velocity = velocity.move_toward(Vector2.ZERO, move_speed * delta * 4)
 		move_and_slide()
 		return
 
-	if not target_crab or not is_instance_valid(target_crab):
-		target_crab = _find_nearest_crab()
+	_wander_timer -= delta
+	if _wander_timer <= 0:
+		var angle = randf_range(0, TAU)
+		_desired_velocity = Vector2(cos(angle), sin(angle)) * move_speed
+		_wander_timer = randf_range(0.3, 0.8)
 
-	if target_crab:
-		var direction = global_position.direction_to(target_crab.global_position)
-		velocity = direction * move_speed
-		move_and_slide()
+	var oscillation = Vector2(
+		sin(Time.get_ticks_msec() * 0.005 + global_position.y * 0.02),
+		cos(Time.get_ticks_msec() * 0.005 + global_position.x * 0.02)
+	) * 30
 
-		if global_position.distance_to(target_crab.global_position) < eat_range:
-			_eat_crab(target_crab)
-			target_crab = null
-	else:
-		velocity = Vector2.ZERO
-		move_and_slide()
+	velocity = velocity.move_toward(_desired_velocity + oscillation, move_speed * delta * 4)
+	move_and_slide()
 
-func _find_nearest_crab() -> Area2D:
-	var search_area = $Search
-	var nearest: Area2D = null
-	var nearest_dist = INF
-
-	for area in search_area.get_overlapping_areas():
-		if area.has_method("collect"):
-			var dist = global_position.distance_squared_to(area.global_position)
-			if dist < nearest_dist:
-				nearest_dist = dist
-				nearest = area
-	return nearest
-
-func _eat_crab(crab: Area2D):
-	crab.collect()
-	GameManager.crabs_eaten += 1
-
-func stun(duration: float = 3.0):
-	if stunned:
+func hit():
+	if vulnerable:
 		return
-	stunned = true
-	velocity = Vector2.ZERO
-	await get_tree().create_timer(duration).timeout
-	stunned = false
+	hit_count += 1
+	if hit_count >= 2:
+		vulnerable = true
+		modulate.a = 0.4
+
+func collect():
+	queue_free()

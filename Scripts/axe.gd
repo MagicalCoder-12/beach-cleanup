@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed: float = 300.0
+@export var speed: float = 400.0
 @export var lifetime: float = 2.0
 
 var direction: Vector2 = Vector2.RIGHT
@@ -18,6 +18,6 @@ func _physics_process(delta):
 	global_position += direction * speed * delta
 
 func _on_body_entered(body: Node2D):
-	if body.has_method("stun"):
-		body.stun()
+	if body.has_method("hit"):
+		body.hit()
 	queue_free()

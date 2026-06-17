@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5t42sxk6rylb" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0110.png" id="1_ouv02"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
-size = Vector2(40, 35)
+size = Vector2(39, 43)
 
 [node name="Crab" type="Area2D" unique_id=1946949181]
 collision_mask = 6

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b8tp3sh0fshv6"]
 
-[ext_resource type="Script" uid="uid://dxv8sqhf5ifs5" path="res://Scenes/crab_counter_ui.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dxv8sqhf5ifs5" path="res://Scripts/crab_counter_ui.gd" id="1_script"]
 
 [node name="CrabCounterUI" type="CanvasLayer" unique_id=997724776]
 script = ExtResource("1_script")
 
-[node name="Label" type="Label" parent="." unique_id=195533976]
+[node name="Crabs" type="Label" parent="." unique_id=195533976]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -15,3 +15,30 @@ grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 0, 0.02745098, 1)
 theme_override_font_sizes/font_size = 32
 text = "Crabs: 0"
+
+[node name="Ghosts" type="Label" parent="." unique_id=2758892]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -246.0
+offset_top = 53.0
+offset_right = -6.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0, 0.02745098, 1)
+theme_override_font_sizes/font_size = 32
+text = "Ghosts: 0/0"
+
+[node name="TimerLabel" type="Label" parent="." unique_id=421597824]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 48
+text = "Time: 180"
+horizontal_alignment = 1
