@@ -97,6 +97,7 @@ grow_vertical = 2
 color = Color(0.1254902, 0.1254902, 0.1254902, 0.5058824)
 
 [node name="GameWonWindow" parent="Gamestates" unique_id=1002552123 instance=ExtResource("8_d1ilt")]
+pauses_game = true
 visible = false
 offset_left = -216.0
 offset_top = -120.0
@@ -104,6 +105,7 @@ offset_right = 216.0
 offset_bottom = 120.0
 
 [node name="LevelLostWindow" parent="Gamestates" unique_id=1659462458 instance=ExtResource("7_hptm8")]
+pauses_game = true
 visible = false
 offset_left = -216.0
 offset_top = -120.0
@@ -192,7 +194,7 @@ offset_top = -69.0
 offset_right = -412.0
 offset_bottom = 2.0
 theme_override_font_sizes/font_size = 24
-text = "Okay you want the crab dont press F
+text = "Okay you want the crab dont press P
  just go toward it to collect, trust me 😙"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -204,7 +206,7 @@ offset_right = 430.0
 offset_bottom = -185.0
 theme_override_font_sizes/font_size = 24
 text = "\"Ghosts are cuddly! axe is useless against dont use
- the left click to throw a axe at them just use F collect them.👻"
+ the left click to throw a axe at them just use p collect them.👻"
 horizontal_alignment = 1
 vertical_alignment = 1
 
