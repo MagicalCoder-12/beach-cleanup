@@ -37,7 +37,6 @@ func hit():
 	if hit_count >= 2:
 		vulnerable = true
 		modulate.a = 0.4
-		collision_layer = 0
 
 func collect():
 	queue_free()

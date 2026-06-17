@@ -61,7 +61,7 @@ locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/t
 
 2d_physics/layer_1="Crab"
 2d_physics/layer_2="Player"
-2d_physics/layer_3="Enemy"
+2d_physics/layer_3="ghost"
 
 [maaacks_game_template]
 
