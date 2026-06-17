@@ -11,6 +11,7 @@ size = Vector2(10, 13)
 size = Vector2(6, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=95799535]
+z_index = 1
 scale = Vector2(3.5, 3.5)
 collision_layer = 2
 script = ExtResource("1_cvnsp")

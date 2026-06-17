@@ -130,7 +130,7 @@ position = Vector2(31, 81)
 position = Vector2(692, 132)
 
 [node name="Crab5" parent="crabs" unique_id=1414952116 instance=ExtResource("4_crab")]
-position = Vector2(1655, -391)
+position = Vector2(-1086, 252)
 
 [node name="Crab6" parent="crabs" unique_id=1181592689 instance=ExtResource("4_crab")]
 position = Vector2(1196, 277)
@@ -166,7 +166,7 @@ position = Vector2(1136, 793)
 position = Vector2(1470, -155)
 
 [node name="ghost4" parent="Ghost" unique_id=1734385795 instance=ExtResource("6_ghost")]
-position = Vector2(-1070, 860)
+position = Vector2(1021, 526)
 
 [node name="ghost5" parent="Ghost" unique_id=629379276 instance=ExtResource("6_ghost")]
 position = Vector2(979, 46)
