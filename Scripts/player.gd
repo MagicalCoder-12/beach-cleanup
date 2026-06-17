@@ -73,7 +73,7 @@ func _throw_axe():
 	axe.direction = dir
 	get_tree().current_scene.add_child(axe)
 
-	axe_cooldown = 1.0
+	axe_cooldown = 0.5
 
 func _stun():
 	if stunned:

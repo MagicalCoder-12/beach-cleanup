@@ -11,9 +11,10 @@ size = Vector2(10, 13)
 size = Vector2(6, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=95799535]
+scale = Vector2(3.5, 3.5)
 collision_layer = 2
-scale = Vector2(3, 3)
 script = ExtResource("1_cvnsp")
+speed = 600.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1006470488]
 position = Vector2(0.19999999, -7.9999995)
@@ -33,11 +34,10 @@ texture = ExtResource("1_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=950493248]
 position = Vector2(41.333336, 13.666667)
-zoom = Vector2(1.2, 1.2)
 limit_left = -1229
-limit_top = -423
-limit_right = 2275
-limit_bottom = 1140
+limit_top = -460
+limit_right = 2290
+limit_bottom = 1150
 
 [node name="Axe" parent="." unique_id=384326258 instance=ExtResource("3_6t5aa")]
 visible = false

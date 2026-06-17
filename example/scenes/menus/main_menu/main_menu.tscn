@@ -16,21 +16,8 @@ text = "Beach Cleanup"
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(580041505) index="0" unique_id=1691719897]
 offset_left = -139.0
-offset_top = -178.0
+offset_top = -120.0
 offset_right = 176.0
-offset_bottom = 130.0
-
-[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
-size_flags_vertical = 3
-
-[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1028226159]
-size_flags_vertical = 3
-
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
-size_flags_vertical = 3
-
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
-size_flags_vertical = 3
 
 [node name="VersionLabel" parent="VersionMargin/VersionContainer" parent_id_path=PackedInt32Array(645412385) index="0" unique_id=321873498]
 text = "v1.0.0"

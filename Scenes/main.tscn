@@ -77,7 +77,7 @@ shape = SubResource("RectangleShape2D_h2yge")
 [node name="Player" parent="." unique_id=95799535 instance=ExtResource("3_h2yge")]
 position = Vector2(-1011.00006, -232)
 collision_layer = 1
-speed = 300.0
+stun_duration = 1.0
 
 [node name="CrabCounterUI" parent="." unique_id=377231282 instance=ExtResource("5_crabui")]
 
@@ -97,20 +97,22 @@ grow_vertical = 2
 color = Color(0.1254902, 0.1254902, 0.1254902, 0.5058824)
 
 [node name="GameWonWindow" parent="Gamestates" unique_id=1002552123 instance=ExtResource("8_d1ilt")]
-pauses_game = true
+process_mode = 3
 visible = false
 offset_left = -216.0
 offset_top = -120.0
 offset_right = 216.0
 offset_bottom = 120.0
+pauses_game = true
 
 [node name="LevelLostWindow" parent="Gamestates" unique_id=1659462458 instance=ExtResource("7_hptm8")]
-pauses_game = true
+process_mode = 3
 visible = false
 offset_left = -216.0
 offset_top = -120.0
 offset_right = 216.0
 offset_bottom = 120.0
+pauses_game = true
 
 [node name="crabs" type="Node2D" parent="." unique_id=1453925386]
 position = Vector2(150, 100)
@@ -194,7 +196,7 @@ offset_top = -69.0
 offset_right = -412.0
 offset_bottom = 2.0
 theme_override_font_sizes/font_size = 24
-text = "Okay you want the crab dont press P
+text = "Okay you want the crab dont press J
  just go toward it to collect, trust me 😙"
 horizontal_alignment = 1
 vertical_alignment = 1
