@@ -30,7 +30,3 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="Video" parent="." unique_id=1205827585 instance=ExtResource("5_iex3e")]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 3
