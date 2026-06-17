@@ -4,10 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://5t42sxk6rylb" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0110.png" id="1_ouv02"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
-size = Vector2(59, 54)
+size = Vector2(24, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03ywb"]
+size = Vector2(58, 56)
 
 [node name="Crab" type="CharacterBody2D" unique_id=1946949181]
-collision_mask = 1
 script = ExtResource("1_03ywb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=602937102]
@@ -16,5 +18,11 @@ texture = ExtResource("1_ouv02")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1282110870]
 z_index = 1
-position = Vector2(-2.5, -1)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_1f0kj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1726788711]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=669629467]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_03ywb")

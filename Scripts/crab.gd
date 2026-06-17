@@ -7,7 +7,7 @@ var _desired_velocity: Vector2
 var _wander_timer: float = 0.0
 
 func _ready():
-	add_to_group("crabs")
+	$Area2D.add_to_group("crabs")
 
 func _physics_process(delta):
 	if collected:
